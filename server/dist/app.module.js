@@ -8,15 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
+const users_module_1 = require("./users/users.module");
+const sequelize_1 = require("@nestjs/sequelize");
+const config_1 = require("@nestjs/config");
+const sequelizeConfig_service_1 = require("./config/sequelizeConfig.service");
+const configuration_1 = require("./config/configuration");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        imports: [
+            sequelize_1.SequelizeModule.forRootAsync({
+                imports: [config_1.ConfigModule],
+                useClass: sequelizeConfig_service_1.SequelizeConfigService,
+            }),
+            config_1.ConfigModule.forRoot({
+                load: [configuration_1.databaseConfig],
+            }),
+            users_module_1.UsersModule,
+        ],
     })
 ], AppModule);
 exports.AppModule = AppModule;
