@@ -39,6 +39,7 @@ let UsersController = class UsersController {
     }
 };
 __decorate([
+    (0, swagger_1.ApiOkResponse)({ type: types_1.SignupResponse }),
     (0, common_1.Post)('/signup'),
     (0, common_1.HttpCode)(common_1.HttpStatus.CREATED),
     (0, common_1.Header)('Content-type', 'application/json'),
@@ -59,6 +60,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], UsersController.prototype, "login", null);
 __decorate([
+    (0, swagger_1.ApiOkResponse)({ type: types_1.LoginCheckResponse }),
     (0, common_1.Get)('/login-check'),
     (0, common_1.UseGuards)(authenticated_guard_1.AuthenticatedGuard),
     __param(0, (0, common_1.Request)()),
@@ -67,6 +69,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], UsersController.prototype, "loginCheck", null);
 __decorate([
+    (0, swagger_1.ApiOkResponse)({ type: types_1.LogoutUserResponse }),
     (0, common_1.Get)('/logout'),
     __param(0, (0, common_1.Request)()),
     __metadata("design:type", Function),

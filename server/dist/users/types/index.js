@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LoginUserResponse = exports.LoginUserRequest = void 0;
+exports.SignupResponse = exports.LoginCheckResponse = exports.LogoutUserResponse = exports.LoginUserResponse = exports.LoginUserRequest = void 0;
 const swagger_1 = require("@nestjs/swagger");
 class LoginUserRequest {
 }
@@ -41,4 +41,55 @@ __decorate([
     __metadata("design:type", String)
 ], LoginUserResponse.prototype, "password", void 0);
 exports.LoginUserResponse = LoginUserResponse;
+class LogoutUserResponse {
+}
+__decorate([
+    (0, swagger_1.ApiProperty)({ example: 'Session has ended' }),
+    __metadata("design:type", String)
+], LogoutUserResponse.prototype, "msg", void 0);
+exports.LogoutUserResponse = LogoutUserResponse;
+class LoginCheckResponse {
+}
+__decorate([
+    (0, swagger_1.ApiProperty)({ example: '1' }),
+    __metadata("design:type", String)
+], LoginCheckResponse.prototype, "userId", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ example: 'Swetlana123' }),
+    __metadata("design:type", String)
+], LoginCheckResponse.prototype, "user", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ example: 'Swetlana123' }),
+    __metadata("design:type", String)
+], LoginCheckResponse.prototype, "email", void 0);
+exports.LoginCheckResponse = LoginCheckResponse;
+class SignupResponse {
+}
+__decorate([
+    (0, swagger_1.ApiProperty)({ example: '1' }),
+    __metadata("design:type", String)
+], SignupResponse.prototype, "id", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ example: 'Swetlana123' }),
+    __metadata("design:type", String)
+], SignupResponse.prototype, "username", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({
+        example: '$2b$10$SdogPlqQdGscPWCdevgK2.W0noLkpiBJr/wS9i/.GQ1qPZ',
+    }),
+    __metadata("design:type", String)
+], SignupResponse.prototype, "password", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ example: 'Swetlana123' }),
+    __metadata("design:type", String)
+], SignupResponse.prototype, "email", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ example: '2023-05-02T04:26:11.647Z' }),
+    __metadata("design:type", String)
+], SignupResponse.prototype, "updatedAt", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ example: '2023-05-02T04:26:11.647Z' }),
+    __metadata("design:type", String)
+], SignupResponse.prototype, "createdAt", void 0);
+exports.SignupResponse = SignupResponse;
 //# sourceMappingURL=index.js.map
