@@ -3,7 +3,8 @@ export declare const sqlConfig: (() => {
     dialect: Dialect;
     logging: boolean;
     host: string;
-    port: string;
+    port: number;
+    username: string;
     password: string;
     database: string;
     autoLoadEntities: boolean;
@@ -12,7 +13,8 @@ export declare const sqlConfig: (() => {
     dialect: Dialect;
     logging: boolean;
     host: string;
-    port: string;
+    port: number;
+    username: string;
     password: string;
     database: string;
     autoLoadEntities: boolean;

@@ -3,7 +3,8 @@ export declare const databaseConfig: (() => {
         dialect: import("sequelize").Dialect;
         logging: boolean;
         host: string;
-        port: string;
+        port: number;
+        username: string;
         password: string;
         database: string;
         autoLoadEntities: boolean;
@@ -14,7 +15,8 @@ export declare const databaseConfig: (() => {
         dialect: import("sequelize").Dialect;
         logging: boolean;
         host: string;
-        port: string;
+        port: number;
+        username: string;
         password: string;
         database: string;
         autoLoadEntities: boolean;

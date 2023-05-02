@@ -18,12 +18,13 @@ let SequelizeConfigService = class SequelizeConfigService {
         this.configService = configService;
     }
     createSequelizeOptions() {
-        const { sql: { dialect, logging, host, port, password, database }, } = this.configService.get('database');
+        const { sql: { dialect, logging, host, port, username, password, database }, } = this.configService.get('database');
         return {
             dialect,
             logging,
             host,
             port,
+            username,
             password,
             database,
             models: [users_model_1.User],
@@ -31,7 +32,7 @@ let SequelizeConfigService = class SequelizeConfigService {
             synchronize: true,
             define: {
                 charset: 'utf8',
-                collate: 'utf8mb4_0900_ai_ci',
+                collate: 'utf8_general_ci',
             },
         };
     }
