@@ -14,6 +14,7 @@ const config_1 = require("@nestjs/config");
 const sequelizeConfig_service_1 = require("./config/sequelizeConfig.service");
 const configuration_1 = require("./config/configuration");
 const auth_module_1 = require("./auth/auth.module");
+const boiler_parts_module_1 = require("./boiler-parts/boiler-parts.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -28,6 +29,7 @@ AppModule = __decorate([
             }),
             users_module_1.UsersModule,
             auth_module_1.AuthModule,
+            boiler_parts_module_1.BoilerPartsModule,
         ],
     })
 ], AppModule);
