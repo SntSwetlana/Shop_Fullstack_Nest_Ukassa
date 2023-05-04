@@ -15,7 +15,7 @@ export declare class BoilerPartsService {
         count: number;
         rows: BoilerParts[];
     }>;
-    findOne(id: number): Promise<BoilerParts>;
+    findOne(id: number | string): Promise<BoilerParts>;
     findOneByName(name: string): Promise<BoilerParts>;
     searchByString(str: string): Promise<{
         count: number;
