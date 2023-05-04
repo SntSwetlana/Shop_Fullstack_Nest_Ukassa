@@ -1,14 +1,3 @@
-// {
-//     "description": "Dolore ad illo officiis consequuntur magnam nulla eveniet quasi ipsam.",
-//     "images": "[\"https://loremflickr.com/640/480/technics?random=1279333085\",\"https://loremflickr.com/640/480/technics?random=2433240068\",\"https://loremflickr.com/640/480/technics?random=8123644293\",\"https://loremflickr.com/640/480/technics?random=4878930856\",\"https://loremflickr.com/640/480/technics?random=4676415882\",\"https://loremflickr.com/640/480/technics?random=7832025558\",\"https://loremflickr.com/640/480/technics?random=2947379941\"]",
-//     "in_stock": 3,
-//     "bestseller": true,
-//     "new": true,
-//     "popularity": 444,
-//     "compatibility": "Magni sunt quam rem quibusdam debitis ab.",
-//     "createdAt": "2023-05-03T10:11:08.000Z",
-//     "updatedAt": "2023-05-03T10:11:08.000Z"
-
 import { faker } from '@faker-js/faker';
 import { ApiProperty } from '@nestjs/swagger';
 
