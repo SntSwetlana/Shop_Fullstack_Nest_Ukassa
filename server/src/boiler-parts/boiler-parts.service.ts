@@ -5,7 +5,7 @@ import { IBoilerPartQuery } from './types';
 import { query } from 'express';
 import { Op } from 'sequelize';
 
-const pageLimit = 20;
+export const pageLimit = 20;
 
 @Injectable()
 export class BoilerPartsService {

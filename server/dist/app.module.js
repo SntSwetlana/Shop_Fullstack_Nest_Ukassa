@@ -27,7 +27,7 @@ AppModule = __decorate([
                 useClass: sequelizeConfig_service_1.SequelizeConfigService,
             }),
             config_1.ConfigModule.forRoot({
-                load: [configuration_1.databaseConfig],
+                load: [configuration_1.databaseConfig, configuration_1.constConfiguration],
             }),
             users_module_1.UsersModule,
             auth_module_1.AuthModule,

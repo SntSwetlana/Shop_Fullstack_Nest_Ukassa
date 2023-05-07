@@ -12,19 +12,19 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BoilerPartsService = void 0;
+exports.BoilerPartsService = exports.pageLimit = void 0;
 const common_1 = require("@nestjs/common");
 const sequelize_1 = require("@nestjs/sequelize");
 const boiler_parts_model_1 = require("./boiler-parts.model");
 const sequelize_2 = require("sequelize");
-const pageLimit = 20;
+exports.pageLimit = 20;
 let BoilerPartsService = class BoilerPartsService {
     constructor(boilerPartsModel) {
         this.boilerPartsModel = boilerPartsModel;
     }
     async paginateAndFilter(query) {
         const limit = +query.limit;
-        const offset = +query.offset * pageLimit;
+        const offset = +query.offset * exports.pageLimit;
         return this.boilerPartsModel.findAndCountAll({
             limit,
             offset,
@@ -52,7 +52,7 @@ let BoilerPartsService = class BoilerPartsService {
     }
     async searchByString(str) {
         return this.boilerPartsModel.findAndCountAll({
-            limit: pageLimit,
+            limit: exports.pageLimit,
             where: { name: { [sequelize_2.Op.like]: `%${str}%` } },
         });
     }

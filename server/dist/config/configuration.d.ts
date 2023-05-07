@@ -23,3 +23,6 @@ export declare const databaseConfig: (() => {
         synchronize: boolean;
     };
 }>;
+export declare const constConfiguration: () => {
+    PAGES_LIMIT: number;
+};

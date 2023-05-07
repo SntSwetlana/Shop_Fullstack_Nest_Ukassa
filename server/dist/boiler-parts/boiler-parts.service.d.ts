@@ -1,5 +1,6 @@
 import { BoilerParts } from './boiler-parts.model';
 import { IBoilerPartQuery } from './types';
+export declare const pageLimit = 20;
 export declare class BoilerPartsService {
     private boilerPartsModel;
     constructor(boilerPartsModel: typeof BoilerParts);

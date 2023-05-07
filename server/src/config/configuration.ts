@@ -6,3 +6,7 @@ export const databaseConfig = registerAs('database', () => ({
     ...sqlConfig(),
   },
 }));
+
+export const constConfiguration = () => ({
+  PAGES_LIMIT: 20,
+});
