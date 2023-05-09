@@ -4,9 +4,6 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { Test, TestingModule } from '@nestjs/testing';
 import { databaseConfig } from 'src/config/configuration';
 import { SequelizeConfigService } from 'src/config/sequelizeConfig.service';
-import { User } from 'src/users/users.model';
-import * as bcrypt from 'bcrypt';
-import { AuthService } from 'src/auth/auth.service';
 import { BoilerPartsModule } from 'src/boiler-parts/boiler-parts.module';
 import { BoilerPartsService } from 'src/boiler-parts/boiler-parts.service';
 
