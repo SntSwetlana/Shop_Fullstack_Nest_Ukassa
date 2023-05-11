@@ -20,26 +20,26 @@ const add_to_cart_dto_1 = require("./dto/add-to-cart.dto");
 const swagger_1 = require("@nestjs/swagger");
 const types_1 = require("./types");
 let ShoppingCartController = class ShoppingCartController {
-    constructor(shoppingCardService) {
-        this.shoppingCardService = shoppingCardService;
+    constructor(shoppingCartService) {
+        this.shoppingCartService = shoppingCartService;
     }
     getAll(userId) {
-        return this.shoppingCardService.findAll(userId);
+        return this.shoppingCartService.findAll(userId);
     }
     addToCart(addToCartDto) {
-        return this.shoppingCardService.add(addToCartDto);
+        return this.shoppingCartService.add(addToCartDto);
     }
     updateCount({ count }, partId) {
-        return this.shoppingCardService.updateCount(count, partId);
+        return this.shoppingCartService.updateCount(count, partId);
     }
     updateTotalPrice({ total_price }, partId) {
-        return this.shoppingCardService.updateTotalPrice(total_price, partId);
+        return this.shoppingCartService.updateTotalPrice(total_price, partId);
     }
     removeOne(partId) {
-        return this.shoppingCardService.remove(partId);
+        return this.shoppingCartService.remove(partId);
     }
     removeAll(userId) {
-        return this.shoppingCardService.removeAll(userId);
+        return this.shoppingCartService.removeAll(userId);
     }
 };
 __decorate([

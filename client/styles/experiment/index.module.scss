@@ -1,0 +1,9 @@
+.dashboard {
+  position: relative;
+  &__svg {
+    & svg {
+      stroke: #1C629E;
+      transition: stroke .2s ease-in-out;
+    }
+  }
+}

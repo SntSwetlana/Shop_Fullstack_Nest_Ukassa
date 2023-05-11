@@ -19,20 +19,20 @@ const sequelize_1 = require("@nestjs/sequelize");
 const users_service_1 = require("../users/users.service");
 const boiler_parts_service_1 = require("../boiler-parts/boiler-parts.service");
 let ShoppingCartService = class ShoppingCartService {
-    constructor(shoppingCardModel, usersService, boilerPartsService) {
-        this.shoppingCardModel = shoppingCardModel;
+    constructor(shoppingCartModel, usersService, boilerPartsService) {
+        this.shoppingCartModel = shoppingCartModel;
         this.usersService = usersService;
         this.boilerPartsService = boilerPartsService;
     }
     async findAll(userId) {
-        return this.shoppingCardModel.findAll({ where: { userId } });
+        return this.shoppingCartModel.findAll({ where: { userId } });
     }
-    async add(addToCardDto) {
+    async add(addToCartDto) {
         const cart = new shopping_cart_model_1.ShoppingCart();
         const user = await this.usersService.findOne({
-            where: { username: addToCardDto.username },
+            where: { username: addToCartDto.username },
         });
-        const part = await this.boilerPartsService.findOne(addToCardDto.partId);
+        const part = await this.boilerPartsService.findOne(addToCartDto.partId);
         cart.userId = user.id;
         cart.partId = part.id;
         cart.boiler_manufacturer = part.boiler_manufacturer;
@@ -45,21 +45,21 @@ let ShoppingCartService = class ShoppingCartService {
         return cart.save();
     }
     async updateCount(count, partId) {
-        await this.shoppingCardModel.update({ count }, { where: { partId } });
-        const part = await this.shoppingCardModel.findOne({ where: { partId } });
+        await this.shoppingCartModel.update({ count }, { where: { partId } });
+        const part = await this.shoppingCartModel.findOne({ where: { partId } });
         return { count: part.count };
     }
     async updateTotalPrice(total_price, partId) {
-        await this.shoppingCardModel.update({ total_price }, { where: { partId } });
-        const part = await this.shoppingCardModel.findOne({ where: { partId } });
+        await this.shoppingCartModel.update({ total_price }, { where: { partId } });
+        const part = await this.shoppingCartModel.findOne({ where: { partId } });
         return { total_price: part.total_price };
     }
     async remove(partId) {
-        const part = await this.shoppingCardModel.findOne({ where: { partId } });
+        const part = await this.shoppingCartModel.findOne({ where: { partId } });
         await part.destroy();
     }
     async removeAll(userId) {
-        await this.shoppingCardModel.destroy({ where: { userId } });
+        await this.shoppingCartModel.destroy({ where: { userId } });
     }
 };
 ShoppingCartService = __decorate([

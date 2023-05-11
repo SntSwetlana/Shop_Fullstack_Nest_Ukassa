@@ -1,6 +1,6 @@
 import Header from '@/components/modules/Header/Header'
 import Head from 'next/head'
-
+//import styles from '@/styles/experiment/index.module.scss'
 function Dashboard() {
   return (
     <>
@@ -12,7 +12,13 @@ function Dashboard() {
         <link rel="icon" type="image/svg" sizes="32x32" href="/img/logo1.svg" />
       </Head>
       <Header />
-      <h1>Dashboard</h1>
+      <main>
+        <h1>Dashboard</h1>
+        <div className="overlay" />
+      </main>
+      {/* <div>
+        <img src="/img/cart1.svg"  alt="back1" />
+      </div> */}
     </>
   )
 }

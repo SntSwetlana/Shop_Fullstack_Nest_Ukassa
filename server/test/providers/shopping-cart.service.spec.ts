@@ -165,7 +165,7 @@ describe('Shopping-cart controller', () => {
     expect(result).toEqual({ total_price: part.price * 3 });
   });
 
-  it('should delete card item', async () => {
+  it('should delete cart item', async () => {
     await shoppingCartService.remove(1);
     const user = await usersService.findOne({
       where: { username: mockedUser.username },
@@ -176,7 +176,7 @@ describe('Shopping-cart controller', () => {
     expect(cart.find((item) => item.partId === 1)).toBeUndefined();
   });
 
-  it('should delete all card items', async () => {
+  it('should delete all cart items', async () => {
     const user = await usersService.findOne({
       where: { username: mockedUser.username },
     });

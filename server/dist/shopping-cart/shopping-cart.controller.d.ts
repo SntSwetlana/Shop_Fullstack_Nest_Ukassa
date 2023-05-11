@@ -1,8 +1,8 @@
 import { ShoppingCartService } from './shopping-cart.service';
 import { AddToCartDto } from './dto/add-to-cart.dto';
 export declare class ShoppingCartController {
-    private readonly shoppingCardService;
-    constructor(shoppingCardService: ShoppingCartService);
+    private readonly shoppingCartService;
+    constructor(shoppingCartService: ShoppingCartService);
     getAll(userId: string): Promise<import("./shopping-cart.model").ShoppingCart[]>;
     addToCart(addToCartDto: AddToCartDto): Promise<import("./shopping-cart.model").ShoppingCart>;
     updateCount({ count }: {
