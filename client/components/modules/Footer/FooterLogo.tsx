@@ -7,7 +7,7 @@ const FooterLogo = () => (
     <Link href="/dashboard" passHref legacyBehavior>
       <a className={styles.footer__top__item__logo}>
         <img src="/img/logo-bw.svg" alt="logo" />
-        <span className={styles.footer__top__item__text}>Gas boiler parts</span>
+        <span className={styles.footer__top__item__logo__text}>Gas boiler parts</span>
       </a>
     </Link>
   </div>
