@@ -7,6 +7,8 @@ import { $mode } from '@/context/mode'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { useEffect } from 'react'
 import styles from '@/styles/dashboard/index.module.scss'
+import BrandSliderNextArrow from '@/components/elements/BrandSliderNextArrow/BrandSliderNextArrow'
+import BrandSliderPrevArrow from '@/components/elements/BrandSliderPrevArrow/BrandSliderPrevArrow'
 
 const BrandSlider = () => {
   const isMedia768 = useMediaQuery(768)
@@ -43,10 +45,12 @@ const BrandSlider = () => {
     variableWidth: true,
     autoplay: true,
     speed: 500,
+    nextArrow: <BrandSliderNextArrow modeClass={darkModeClass} />,
+    prevArrow: <BrandSliderPrevArrow modeClass={darkModeClass} />,
   }
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings} className={styles.dashboard__brands__slider}>
       {brandItems.map((item) => (
         <div
           className={`${styles.dashboard__brands__slider} ${darkModeClass}`}
