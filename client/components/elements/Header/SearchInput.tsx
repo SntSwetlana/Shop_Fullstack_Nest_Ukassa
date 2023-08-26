@@ -1,7 +1,7 @@
 import { useStore } from 'effector-react'
 import { useState } from 'react'
 import Select from 'react-select'
-import { defaultStyles } from 'react-select'
+//import { defaultStyles } from 'react-select'
 import { $mode } from '@/context/mode'
 import { SelectOptionType } from '@/types/common'
 import {

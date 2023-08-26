@@ -1,5 +1,5 @@
 import Layout from '@/components/layout/Layout'
-import DashboardPage from '@/components/templates/DashboardPage/Dashboard'
+import DashboardPage from '@/components/templates/DashboardPage/DashboardPage'
 import Head from 'next/head'
 //import styles from '@/styles/experiment/index.module.scss'
 function Dashboard() {

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ContentPlaceholder } from './ContentPlaceholder'
+//import { ContentPlaceholder } from './ContentPlaceholder'
 import { IAccordion } from '@/types/common'
 const Accordion = ({
   children,

@@ -10,7 +10,7 @@ import styles from '@/styles/header/index.module.scss'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 
 const HeaderBottom = () => {
-  const isMedia950 = useMediaQuery(950);
+  const isMedia950 = useMediaQuery(950)
   const mode = useStore($mode)
   const darkModeClass = mode === 'dark' ? `${styles.dark_mode}` : ''
 
