@@ -7,10 +7,12 @@ import ProfileSvg from '@/components/elements/ProfileSvg/ProfileSvg'
 import LogoutSvg from '@/components/elements/LogoutSvg/LogoutSvg'
 import { withClickOutside } from '@/utils/withClickOutside'
 import styles from '@/styles/ProfileDropDown/index.module.scss'
+import { $user } from '@/context/user'
 
 const ProfileDropDown = forwardRef<HTMLDivElement, IWrappedComponentProps>(
   ({ open, setOpen }, ref) => {
     const mode = useStore($mode)
+    const user = useStore($user)
     const darkModeClass = mode === 'dark' ? `${styles.dark_mode}` : ''
 
     const toggleProfileDropDown = () => setOpen(!open)
@@ -35,12 +37,12 @@ const ProfileDropDown = forwardRef<HTMLDivElement, IWrappedComponentProps>(
                 <span
                   className={`${styles.profile__dropdown__username} ${darkModeClass}`}
                 >
-                  Swetlana
+                  {user.username}
                 </span>
                 <span
                   className={`${styles.profile__dropdown__email} ${darkModeClass}`}
                 >
-                  snt.swetlana@gmail.com
+                  {user.email}
                 </span>
               </li>
               <li className={styles.profile__dropdown__item}>
