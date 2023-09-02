@@ -14,3 +14,9 @@ export interface IBoilerPart {
   compatibility: string
 
 }
+
+export interface IBoilerParts {
+  counters: number
+  rows: IBoilerPart[]
+}
+
