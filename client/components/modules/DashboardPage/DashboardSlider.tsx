@@ -3,14 +3,14 @@ import Slider from 'react-slick'
 import { useStore } from 'effector-react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import Link from 'next/link'
 import { $mode } from '@/context/mode'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { useEffect } from 'react'
 import { IDashboardSlider } from '@/types/dashboard'
-import styles from '@/styles/dashboard/index.module.scss'
 import skeletonStyles from '@/styles/skeleton/index.module.scss'
-import Link from 'next/link'
 import { formatPrice } from '@/utils/common'
+import styles from '@/styles/dashboard/index.module.scss'
 
 const DashboardSlider = ({
   items,
